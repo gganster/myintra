@@ -4,14 +4,11 @@ import reportWebVitals from './reportWebVitals';
 
 import App from "./hydrogen/core/init";
 
-import { ToastContainer } from 'react-toastify';
-import Router from "./lib/internal/Router";
-import { Provider as UserProvider } from 'contexts/user';
-
-import moment from "moment";
+//import { ToastContainer } from 'react-toastify';
+//import Router from "./lib/internal/Router";
+//import moment from "moment";
 
 /*const App = () => {
-
   return (
     <>
       <ToastContainer pauseOnFocusLoss={false}
@@ -24,5 +21,4 @@ import moment from "moment";
 }*/
 
 ReactDOM.render(<App />, document.getElementById('root'));
-
 reportWebVitals();

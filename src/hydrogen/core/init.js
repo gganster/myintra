@@ -1,9 +1,11 @@
 import React, {useEffect} from "react";
 import 'moment/locale/fr';
+
 import 'react-toastify/dist/ReactToastify.css';
 import 'react-perfect-scrollbar/dist/css/styles.css';
 import "react-datepicker/dist/react-datepicker.css";
-import "./index.css";
+
+import "../styles/index.css";
 
 import moment from "moment";
 
