@@ -1,17 +1,17 @@
 import {useState} from "react"
 import { Link } from "react-router-dom";
 import { Button, Card, TextInput } from "lib/components";
-import { useAuthUtilities } from "hooks/useAuth";
+import useAuth from "hydrogen/core/hooks/useAuth";
 
 const Login = () => {
-  const {loginWithMail} = useAuthUtilities();
+  const {login} = useAuth();
   const [mail, setMail] = useState("");
   const [password, setPassword] = useState("");
   const [loading, setLoading] = useState(false);
 
   const _login = async () => {
     setLoading(true);
-    await loginWithMail(mail, password);
+    await login("withMail", {mail, password});
     setLoading(false);
   }
 

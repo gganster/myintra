@@ -2,13 +2,13 @@ import {Link} from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
 import {Settings, LogOut} from "react-feather"
-import { useAuthUtilities } from "hooks/useAuth";
+import useAuth from "hydrogen/core/hooks/useAuth";
 
 const Header = (props) => {
   const {
     onClick
   } = props;
-  const {logout} = useAuthUtilities();
+  const {logout} = useAuth();
 
   const _logout = () => {
     logout();

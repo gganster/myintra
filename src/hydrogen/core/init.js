@@ -1,9 +1,9 @@
-import React, {useEffect} from "react";
-import 'moment/locale/fr';
+import {useEffect} from "react";
 
 import 'react-toastify/dist/ReactToastify.css';
 import 'react-perfect-scrollbar/dist/css/styles.css';
 import "react-datepicker/dist/react-datepicker.css";
+import 'moment/locale/fr';
 
 import "../styles/index.css";
 
@@ -20,16 +20,8 @@ if (config.driver === "firebase") {
   }
 }
 
-const App = (props) => {
-  const {children} = props;
-
+const useHydrogen = () => {
   useEffect(() => {moment.updateLocale(config.lang);})
-
-  return (
-    <>
-      hello world
-    </>
-  )
 }
 
-export default App;
+export default useHydrogen;

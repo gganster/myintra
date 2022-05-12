@@ -1,10 +1,10 @@
 import {useState} from "react";
 import {Button, Card, TextInput} from "lib/components";
-import { useAuthUtilities } from "hooks/useAuth";
+import useAuth from "hydrogen/core/hooks/useAuth";
 import {toast} from "react-toastify";
 
 const ForgotPassword = () => {
-  const {forgotPassword} = useAuthUtilities();
+  const {forgotPassword} = useAuth();
   const [mail, setMail] = useState("");
   const [loading, setLoading] = useState(false);
   const [status, setStatus] = useState("Un mail de réinitialisation vous a été envoyé sur votre boîte mail.");

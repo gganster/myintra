@@ -2,23 +2,24 @@ import React, {useEffect} from 'react';
 import ReactDOM from 'react-dom';
 import reportWebVitals from './reportWebVitals';
 
-import App from "./hydrogen/core/init";
+import useHydrogen from "./hydrogen/core/init";
+import Router from "./hydrogen/core/Router";
+import { ToastContainer } from 'react-toastify';
+import { Provider as UIProvider } from "./contexts/ui";
 
-//import { ToastContainer } from 'react-toastify';
-//import Router from "./lib/internal/Router";
-//import moment from "moment";
+const App = () => {
+  useHydrogen();
 
-/*const App = () => {
   return (
     <>
       <ToastContainer pauseOnFocusLoss={false}
                       theme="colored" />
-      <UserProvider>
+      <UIProvider>
         <Router />
-      </UserProvider>
+      </UIProvider>
     </>
   )
-}*/
+}
 
 ReactDOM.render(<App />, document.getElementById('root'));
 reportWebVitals();

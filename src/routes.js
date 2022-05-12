@@ -2,7 +2,6 @@
 import BlankLayout from "layouts/Blank";
 import DashboardLayout from "layouts/Dashboard";
 
-
 import { faAddressCard, faChartBar, faHome } from "@fortawesome/free-solid-svg-icons";
 
 import Login from "pages/blank/login";
@@ -14,10 +13,10 @@ import Components from "pages/dashboard/Components";
 import DataView from "pages/dashboard/DataView";
 import ProfilePage from "pages/dashboard/Profile";
 
-import useUser from "contexts/user";
+import useUI from "contexts/ui";
 
 const useRouterConfig = () => {
-  const [ui] = useUser();
+  const [ui] = useUI();
 
   /*
     required:

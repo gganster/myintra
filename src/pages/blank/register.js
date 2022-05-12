@@ -1,10 +1,11 @@
 import {useState} from "react"
 import { Button, Card, TextInput } from "lib/components";
 import { toast } from "react-toastify";
-import { useAuthUtilities } from "hooks/useAuth";
+import useAuth from "hydrogen/core/hooks/useAuth";
+
 
 const Register = () => {
-  const {register} = useAuthUtilities();
+  const {register} = useAuth();
   const [nickname, setNickname] = useState("");
   const [mail, setMail] = useState("");
   const [password, setPassword] = useState("");
@@ -14,7 +15,7 @@ const Register = () => {
   const _register = async () => {
     setLoading(true);
     try {
-      await register(mail, password, {nickname, createdAt: new Date()});
+      await register("withMail", {mail, password, data: {nickname, createdAt: new Date()}});
     } catch (e) {
       console.error(e);
       toast.error(e.message);
