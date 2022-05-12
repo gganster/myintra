@@ -5,9 +5,7 @@ import useUI from "contexts/ui";
 const useAuth = (isHandler = false) => {
   const [ui, setUI] = useUI();
 
-  useEffect(() => {
-    setUI({...ui, loading: false});
-  }, []);
+  useEffect(() => {setUI({...ui, loading: false});}, []);
 
   const register = async (method, args) => {
 
@@ -22,9 +20,11 @@ const useAuth = (isHandler = false) => {
   }
 
   const changePassword = async (oldPassword, newPassword) => {
+
   }
 
   const forgotPassword = async (email) => {
+
   }
 
   return {register, login, logout, changePassword, forgotPassword}
