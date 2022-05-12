@@ -1,3 +1,11 @@
+/*
+
+  Hydrogen required file
+
+  do not delete this file
+
+*/
+
 import {createContext, useState, useContext} from 'react';
 
 const Context = createContext();

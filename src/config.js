@@ -12,7 +12,6 @@ const config = {
     enablePersistence: false
   },
   debug: true,
-
 }
 
 export default config;
