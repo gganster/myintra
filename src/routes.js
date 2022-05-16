@@ -2,7 +2,7 @@
 import BlankLayout from "layouts/Blank";
 import DashboardLayout from "layouts/Dashboard";
 
-import { faAddressCard, faChartBar, faHome } from "@fortawesome/free-solid-svg-icons";
+import { faAddressCard, faHome } from "@fortawesome/free-solid-svg-icons";
 
 import Login from "pages/blank/login";
 import Register from "pages/blank/register";
