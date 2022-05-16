@@ -10,7 +10,7 @@ import Forgot from "pages/blank/forgotPassword";
 
 import Overview from "pages/dashboard/Overview";
 import Components from "pages/dashboard/Components";
-import DataView from "pages/dashboard/DataView";
+//import DataView from "pages/dashboard/DataView";
 import ProfilePage from "pages/dashboard/Profile";
 
 import useUI from "contexts/ui";
@@ -28,8 +28,8 @@ const useRouterConfig = () => {
   */
   const access = [
     {name: "public", isGranted: true},
-    {name: "connected", isGranted: ui.user !== null},
-    {name: "admin", isGranted: ui.user && ui.user.role === "admin"}
+    {name: "connected", isGranted: true},
+    {name: "admin", isGranted: true}
   ];
 
   /*
@@ -63,7 +63,7 @@ const useRouterConfig = () => {
     {name: "overview", route: "", type: "custom", layout: "dashboard", access: "connected", component: Overview, icon: faHome},
     {name: "profile", route: "profile", type: "custom", layout: "dashboard", access: "connected", component: ProfilePage, hide: true},
     {name: "Basic components", route: "components", layout: "dashboard", access: "connected", component: Components, icon: faAddressCard},
-    {name: "Data view", route: "dataview", layout: "dashboard", access: "connected", component: DataView, icon: faChartBar}
+    //{name: "Data view", route: "dataview", layout: "dashboard", access: "connected", component: DataView, icon: faChartBar}
   ];
 
   return {access, layouts, routes};

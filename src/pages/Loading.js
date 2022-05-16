@@ -1,4 +1,4 @@
-import { Spinner } from "lib/components";
+import { Spinner } from "hydrogen";
 
 const Loading = () => {
   return (

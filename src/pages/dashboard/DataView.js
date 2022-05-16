@@ -1,4 +1,4 @@
-import {Calendar, Card, Divider, Table, LineChart} from "lib/components";
+import {Calendar, Card, Divider, Table, LineChart} from "hydrogen";
 import { useState } from "react";
 
 const DataView = () => {

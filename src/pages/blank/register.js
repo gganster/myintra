@@ -1,5 +1,5 @@
 import {useState} from "react"
-import { Button, Card, TextInput } from "lib/components";
+import { Button, Card, TextInput } from "hydrogen";
 import { toast } from "react-toastify";
 import useAuth from "hydrogen/core/hooks/useAuth";
 

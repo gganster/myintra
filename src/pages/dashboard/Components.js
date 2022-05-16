@@ -1,6 +1,6 @@
 import {useState} from "react";
-import {Card, Button, Divider, TextInput, TextArea, NumInput, Checkbox, RadioGroup, Modal, Select, DateTimePicker} from "lib/components";
-import { DatePicker, TimePicker } from "lib/components";
+import {Card, Button, Divider, TextInput, TextArea, NumInput, Checkbox, RadioGroup, Modal, Select, DateTimePicker} from "hydrogen";
+import { DatePicker, TimePicker } from "hydrogen";
 import {setHours, setMinutes} from "date-fns";
 
 const Components = () => {

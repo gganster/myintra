@@ -1,5 +1,5 @@
 import React, {useState} from "react";
-import {Card, TextInput, Button, Divider} from "lib/components";
+import {Card, TextInput, Button, Divider} from "hydrogen";
 import firebase from "firebase";
 import { toast } from "react-toastify";
 

@@ -1,6 +1,6 @@
 import {useState} from "react"
 import { Link } from "react-router-dom";
-import { Button, Card, TextInput } from "lib/components";
+import { Button, Card, TextInput } from "hydrogen";
 import useAuth from "hydrogen/core/hooks/useAuth";
 
 const Login = () => {
