@@ -4,6 +4,7 @@ import {Link} from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars, faChevronRight } from "@fortawesome/free-solid-svg-icons";
 import {Settings, LogOut} from "react-feather";
+import { useHistory } from "react-router-dom";
 
 import useRouterConfig from "routes";
 import useAuth from "hydrogen/core/hooks/useAuth";
@@ -12,12 +13,16 @@ import Logo from "assets/img/hydrogen.png";
 
 const Dashboard = (props) => {
   const {children} = props;
+  const history = useHistory();
 
   const {access, routes, layouts} = useRouterConfig();
   const {logout} = useAuth();
   const [sidebarOpen, setSidebarOpen] = useState(true);
 
-  const _logout = () => {logout()}
+  const _logout = () => {
+    logout();
+    history.push("/");
+  }
 
   const renderSidebarLinks = () => {
     const links = routes.filter(r => {

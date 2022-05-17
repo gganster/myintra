@@ -28,8 +28,8 @@ const useRouterConfig = () => {
   */
   const access = [
     {name: "public", isGranted: true},
-    {name: "connected", isGranted: true},
-    {name: "admin", isGranted: true}
+    {name: "connected", isGranted: ui.user !== null},
+    {name: "admin", isGranted: ui.user !== null}
   ];
 
   /*

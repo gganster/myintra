@@ -1,13 +1,22 @@
-import {useState} from "react"
+import {useEffect, useState} from "react"
 import { Link } from "react-router-dom";
 import { Button, Card, TextInput } from "hydrogen";
+import { useHistory } from "react-router-dom";
 import useAuth from "hydrogen/core/hooks/useAuth";
+import useUI from "contexts/ui";
 
 const Login = () => {
+  const [ui] = useUI();
+  const history = useHistory();
   const {login} = useAuth();
+
   const [mail, setMail] = useState("");
   const [password, setPassword] = useState("");
   const [loading, setLoading] = useState(false);
+
+  useEffect(() => {
+    if (ui.user) history.push("/dashboard")
+  }, [ui]);
 
   const _login = async () => {
     setLoading(true);

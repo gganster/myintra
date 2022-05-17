@@ -1,21 +1,29 @@
-import {useState} from "react"
-import { Button, Card, TextInput } from "hydrogen";
+import {useEffect, useState} from "react"
+import { useHistory } from "react-router-dom";
 import { toast } from "react-toastify";
+import { Button, Card, TextInput } from "hydrogen";
 import useAuth from "hydrogen/core/hooks/useAuth";
-
+import useUI from "contexts/ui";
 
 const Register = () => {
+  const history = useHistory();
+  const [ui] = useUI();
   const {register} = useAuth();
+
   const [nickname, setNickname] = useState("");
   const [mail, setMail] = useState("");
   const [password, setPassword] = useState("");
   const [confirm, setConfirm] = useState("");
   const [loading, setLoading] = useState(false);
 
+  useEffect(() => {
+    if (ui.user) history.push("/dashboard")
+  }, [])
+
   const _register = async () => {
     setLoading(true);
     try {
-      await register("withMail", {mail, password, data: {nickname, createdAt: new Date()}});
+      await register("withMail", {mail, password, data: {nickname, createdAt: new Date(), role: "user"}});
     } catch (e) {
       console.error(e);
       toast.error(e.message);

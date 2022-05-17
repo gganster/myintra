@@ -51,7 +51,7 @@ const RouteSystem = (props) => {
 const Router = () => {
   const {layouts, routes} = useRouterConfig();
   const [ui] = useUI();
-  useAuth();
+  useAuth(true);
 
   if (ui.loading) return <Loading />;
 

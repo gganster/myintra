@@ -1,4 +1,4 @@
-import React, {useEffect} from 'react';
+import React from 'react';
 import ReactDOM from 'react-dom';
 import reportWebVitals from './reportWebVitals';
 
@@ -8,7 +8,7 @@ import { ToastContainer } from 'react-toastify';
 import { Provider as UIProvider } from "./contexts/ui";
 
 const App = () => {
-  useHydrogen();
+  useHydrogen(); //do not remove this line
 
   return (
     <>
